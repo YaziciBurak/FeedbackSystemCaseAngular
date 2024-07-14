@@ -1,0 +1,26 @@
+<!-- create-feedback.component.html -->
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Yeni Geri Bildirim Ekle
+        </div>
+        <div class="card-body">
+          <form [formGroup]="createFormFeedbackForm" (ngSubmit)="create()">
+            <div class="mb-3">
+              <label for="userId" class="form-label">User ID</label>
+              <input type="number" class="form-control" id="userId" formControlName="userId">
+            </div>
+            <div class="mb-3">
+              <label for="feedbackContent" class="form-label">Geri Bildirim İçeriği</label>
+              <textarea class="form-control" id="feedbackContent" formControlName="feedbackContent"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Ekle</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
